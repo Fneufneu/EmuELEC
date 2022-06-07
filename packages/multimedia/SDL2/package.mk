@@ -3,8 +3,8 @@
 # Copyright (C) 2018-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="SDL2"
-PKG_VERSION="2.0.9"
-PKG_SHA256="255186dc676ecd0c1dbf10ec8a2cc5d6869b5079d8a38194c2aecdff54b324b1"
+PKG_VERSION="2.0.14"
+PKG_SHA256="d8215b571a581be1332d2106f8036fcb03d12a70bae01e20f424976d275432bc"
 PKG_LICENSE="GPL"
 PKG_SITE="https://www.libsdl.org/"
 PKG_URL="https://www.libsdl.org/release/$PKG_NAME-$PKG_VERSION.tar.gz"
@@ -56,6 +56,7 @@ PKG_CMAKE_OPTS_TARGET="-DSDL_STATIC=ON \
                        -DSDL_DLOPEN=ON \
                        -DCLOCK_GETTIME=OFF \
                        -DRPATH=OFF \
+                       -DVIDEO_KMSDRM=OFF \
                        -DRENDER_D3D=OFF"
 
 if [ "$DISPLAYSERVER" = "x11" ]; then
